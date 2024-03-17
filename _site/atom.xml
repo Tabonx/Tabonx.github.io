@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Pavel Kroupa</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2024-03-17T15:30:21+01:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>Pavel Kroupa</name>
+   <email>pavel@withpavel.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>Mellow Notify</title>
+   <link href="http://localhost:4000/2024/03/17/mellow-notify/"/>
+   <updated>2024-03-17T00:00:00+01:00</updated>
+   <id>http://localhost:4000/2024/03/17/mellow-notify</id>
+   <content type="html">&lt;p&gt;I detest calendars and am very bad at managing my time. What I use is just a basic to-do list that didn’t give me the functionality I wanted, which was to have notifications without generating a task. In order to receive basic notifications for events that don’t require my immediate attention and can be completed at my convenience, I set up Mellow Notify to do just that.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

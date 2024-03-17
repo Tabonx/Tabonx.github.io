@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+  <div class="row">
+    <div class="large-12 large-centered columns">
+
+      <header class="masthead">
+        <img src="{{ site.baseurl }}/public/profile.jpg" alt="Jami Gibbs">
+      </header>
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="large-6 large-offset-3 columns">
+
+      <div class="content-section">
+
+        <p>
+          Hey there! I'm Pavel Kroupa, and I'm a software developer from the Czech Republic with a focus on Apple
+          platforms.
+        </p>
+        <p>
+          Your best bet to reach me is via <a href="mailto:pavel@withpavel.com?Subject=Hello,%20Pavel!">email</a>.
+        </p>
+
+      </div>
+
+      <main>
+        <p>Here are a few of the things I made:</p>
+        {% for post in site.posts %}
+        <div class="project-post">
+          <h2><a href="{{ post.site }}">{{ post.title }}</a></h2>
+
+          {{ post.content }}
+
+          <ul>
+            <li><a href="{{ post.git }}"><i class="fa fa-github"></i></a></li>
+            {% if post.site %}
+            <li><a href="{{ post.site }}"><i class="fa fa-link"></i></a></li>
+            {% endif %}
+          </ul>
+
+          <hr />
+        </div>
+        {% endfor %}
+      </main>
+
+      <footer>
+        <p class="copyright">
+          <!-- &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. -->
+          This site is based on the beautiful <a href="https://github.com/jamigibbs/portfolio">portfolio</a> Jekyll
+          template created by <a href="https://www.jamigibbs.com"> Jami Gibbs</a>
+        </p>
+      </footer>
+
+    </div>
+
+    <div class="large-2 large-offset-1 columns social">
+      <ul>
+        <li>
+          <a href="https://github.com/{{ site.github }}">
+            <i class="fab fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="me" href="https://www.youtube.com/@{{ site.youtube }}">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="me" href="https://www.instagram.com/{{ site.instagram }}">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="me" href="https://twitter.com/{{ site.twitter }}">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+        <li>
+          <a rel="me" href="https://www.linkedin.com/in/{{ site.linkedin}}">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics}}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-2MKR1WFS77');
+  </script>
+  {% endif %}
+</body>
+
+</html>
